@@ -2,7 +2,7 @@
 
 
 /**
- * f_swap - adds the top two elements of the stack.
+ * ff_swap - adds the top two elements of the stack.
  * @head: stack head
  * @counter: line_number
  * Return: no return
