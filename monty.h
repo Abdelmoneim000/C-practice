@@ -57,15 +57,16 @@ typedef struct afc_l
 }  bus_t;
 extern bus_t afc;
 
-void f_push(stack_t **head, unsigned int number);
-void f_pall(stack_t **head, unsigned int number);
-void f_pint(stack_t **head, unsigned int number);
+void ff_push(stack_t **head, unsigned int number);
+void ff_pall(stack_t **head, unsigned int number);
+void ff_pint(stack_t **head, unsigned int number);
 int execute(char *content, stack_t **head, unsigned int counter, FILE *file);
 void freeStack(stack_t *head);
 void addnode(stack_t **head, int n);
 void addqueue(stack_t **head, int n);
-void f_pop(stack_t **head, unsigned int counter);
-void f_swap(stack_t **head, unsigned int counter);
-void f_add(stack_t **head, unsigned int counter);
-void f_nop(stack_t **head, unsigned int counter);
+void ff_pop(stack_t **head, unsigned int counter);
+void ff_swap(stack_t **head, unsigned int counter);
+void ff_add(stack_t **head, unsigned int counter);
+void ff_nop(stack_t **head, unsigned int counter);
+void ff_queue(stack_t **head, unsigned int counter);
 #endif

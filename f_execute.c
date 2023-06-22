@@ -10,11 +10,11 @@
 int execute(char *content, stack_t **stack, unsigned int counter, FILE *file)
 {
 	instruction_t opst[] = {
-				{"push", f_push}, {"pall", f_pall}, {"pint", f_pint},
-				{"pop", f_pop},
-				{"swap", f_swap},
-				{"add", f_add},
-				{"nop", f_nop},
+				{"push", ff_push}, {"pall", ff_pall}, {"pint", ff_pint},
+				{"pop", ff_pop},
+				{"swap", ff_swap},
+				{"add", ff_add},
+				{"nop", ff_nop},
 				{NULL, NULL}
 				};
 	unsigned int i = 0;
@@ -23,7 +23,7 @@ int execute(char *content, stack_t **stack, unsigned int counter, FILE *file)
 	op = strtok(content, " \n\t");
 	if (op && op[0] == '#')
 		return (0);
-	bus.arg = strtok(NULL, " \n\t");
+	afc.arg = strtok(NULL, " \n\t");
 	while (opst[i].opcode && op)
 	{
 		if (strcmp(op, opst[i].opcode) == 0)
