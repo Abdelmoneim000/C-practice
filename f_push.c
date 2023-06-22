@@ -21,13 +21,13 @@ void ff_push(stack_t **head, unsigned int counter)
 		{ fprintf(stderr, "L%d: usage: push integer\n", counter);
 			fclose(afc.file);
 			free(afc.content);
-			free_stack(*head);
+			freeStack(*head);
 			exit(EXIT_FAILURE); }}
 	else
 	{ fprintf(stderr, "L%d: usage: push integer\n", counter);
 		fclose(afc.file);
 		free(afc.content);
-		free_stack(*head);
+		freeStack(*head);
 		exit(EXIT_FAILURE); }
 	n = atoi(afc.arg);
 	if (afc.lifi == 0)

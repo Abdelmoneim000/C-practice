@@ -21,7 +21,7 @@ void ff_add(stack_t **head, unsigned int counter)
 		fprintf(stderr, "L%d: can't add, stack too short\n", counter);
 		fclose(afc.file);
 		free(afc.content);
-		free_stack(*head);
+		freeStack(*head);
 		exit(EXIT_FAILURE);
 	}
 	h = *head;
