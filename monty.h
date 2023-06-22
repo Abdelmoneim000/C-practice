@@ -48,20 +48,20 @@ typedef struct instruction_s
  * @lifi: flag change stack <-> queue
  * Description: carries values through the program
  */
-typedef struct bus_s
+typedef struct afc_l
 {
 	char *arg;
 	FILE *file;
 	char *content;
 	int lifi;
 }  bus_t;
-extern bus_t bus;
+extern bus_t afc;
 
 void f_push(stack_t **head, unsigned int number);
 void f_pall(stack_t **head, unsigned int number);
 void f_pint(stack_t **head, unsigned int number);
 int execute(char *content, stack_t **head, unsigned int counter, FILE *file);
-void free_stack(stack_t *head);
+void freeStack(stack_t *head);
 void addnode(stack_t **head, int n);
 void addqueue(stack_t **head, int n);
 void f_pop(stack_t **head, unsigned int counter);
