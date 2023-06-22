@@ -41,7 +41,7 @@ void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
 
 /**
- * struct bus_s - variables -args, file, line content
+ * struct afc_l - variables -args, file, line content
  * @arg: value
  * @file: pointer to monty file
  * @content: line content
